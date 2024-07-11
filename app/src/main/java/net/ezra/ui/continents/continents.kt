@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -67,6 +68,7 @@ import net.ezra.navigation.ROUTE_CONTACT
 import net.ezra.navigation.ROUTE_CONTINENTS
 import net.ezra.navigation.ROUTE_EUROPE
 import net.ezra.navigation.ROUTE_FLY
+import net.ezra.navigation.ROUTE_INSERT_PRODUCT
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -486,11 +488,20 @@ fun BottomBar(navController: NavHostController) {
                  navController.navigate(ROUTE_ABOUT)
              }
          )
+         BottomNavigationItem(icon = {
+             Icon(imageVector = Icons.Default.ShoppingCart,"",tint = Color.White,)
+         },
+             label = { Text(text = "Add", color = Color.White) },
+             selected = (selectedIndex.value == 2),
+             onClick = {
+                 navController.navigate(ROUTE_INSERT_PRODUCT)
+             }
+         )
 
          BottomNavigationItem(icon = {
              Icon(imageVector = Icons.Default.MailOutline,"",tint = Color.White,)
          },
-             label = { Text(text = "Contact", color = Color.White) },
+             label = { Text(text = "Query", color = Color.White) },
              selected = (selectedIndex.value == 2),
              onClick = {
                  navController.navigate(ROUTE_CONTACT)

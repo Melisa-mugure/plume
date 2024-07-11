@@ -40,6 +40,7 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -811,43 +812,43 @@ fun Fly(navController: NavHostController){
                         Spacer(modifier = Modifier
                             .height(15.dp))
                         Row{
-
-                            Button(onClick = {
-                                navController.navigate(ROUTE_INSERT_PRODUCT)
-                            },
-                                modifier = Modifier
-//                                    .align(Alignment.CenterHorizontally)
-                                    .padding(5.dp)
-                                    .height(55.dp)
-                                    .width(165.dp),
-                                colors = ButtonDefaults.buttonColors(Color.Black),
-                                shape = RoundedCornerShape(30.dp)
-                            ) {
-
-                                Text(text = "INSERT DESTINATION",
-                                )
-
-                            }
-                            Spacer(
-                                modifier = Modifier
-                                    .width(28.dp))
+//
+//                            Button(onClick = {
+//                                navController.navigate(ROUTE_INSERT_PRODUCT)
+//                            },
+//                                modifier = Modifier
+////                                    .align(Alignment.CenterHorizontally)
+//                                    .padding(5.dp)
+//                                    .height(55.dp)
+//                                    .width(165.dp),
+//                                colors = ButtonDefaults.buttonColors(Color.Black),
+//                                shape = RoundedCornerShape(30.dp)
+//                            ) {
+//
+//                                Text(text = "INSERT DESTINATION",
+//                                )
+//
+//                            }
+//                            Spacer(
+//                                modifier = Modifier
+//                                    .width(28.dp))
 
                             Button(onClick = {
                                 navController.navigate(ROUTE_VIEW_PRODUCTS)
                             },
                                 modifier = Modifier
 //                                    .align(Alignment.CenterHorizontally)
-                                    .padding(5.dp)
-                                    .height(55.dp)
-                                    .width(165.dp),
+                                    .padding(13.dp,0.dp,3.dp,0.dp)
+                                    .height(38.dp)
+                                    .width(328.dp),
                                 colors = ButtonDefaults.buttonColors(Color.Black),
                                 shape = RoundedCornerShape(30.dp)
                             ) {
                                 Column{
-                                    Text(text = "VIEW ",
+                                    Text(text = "VIEW DESTINATION",
+                                        fontSize = 16.sp
                                     )
-                                    Text(text = "DESTINATION ",
-                                    )
+
                                 }
 
 
@@ -1342,15 +1343,19 @@ fun IndicatorDots(isSelected: Boolean, modifier: Modifier.Companion) {
 
 }
 
+
 @Composable
 fun BottomBar(navController: NavHostController) {
+
     val selectedIndex = remember { mutableStateOf(0) }
+
     BottomNavigation(
         backgroundColor = Color(0xFF7C9AAD)
         ,
         elevation = 10.dp) {
 
-        BottomNavigationItem(icon = {
+        BottomNavigationItem(
+            icon = {
             Icon(imageVector = Icons.Default.Home,"", tint = Color.White
             )
         },
@@ -1358,7 +1363,7 @@ fun BottomBar(navController: NavHostController) {
             selected = (selectedIndex.value == 0),
             onClick = {
                navController.navigate(ROUTE_FLY)
-            })
+            },)
 
         BottomNavigationItem(icon = {
             Icon(painter = painterResource(id = R.drawable.location ),
@@ -1383,15 +1388,25 @@ fun BottomBar(navController: NavHostController) {
             }
         )
         BottomNavigationItem(icon = {
+            Icon(imageVector = Icons.Default.ShoppingCart,"",tint = Color.White,)
+        },
+            label = { Text(text = "Add", color = Color.White) },
+            selected = (selectedIndex.value == 2),
+            onClick = {
+                navController.navigate(ROUTE_INSERT_PRODUCT)
+            }
+        )
+        BottomNavigationItem(icon = {
             Icon(imageVector = Icons.Default.MailOutline,"",tint = Color.White,)
         },
-            label = { Text(text = "Contact", color = Color.White) },
+            label = { Text(text = "Query", color = Color.White) },
             selected = (selectedIndex.value == 2),
             onClick = {
                 navController.navigate(ROUTE_CONTACT)
             }
         )
     }
+
 }
 
 @Preview(showBackground = true)
