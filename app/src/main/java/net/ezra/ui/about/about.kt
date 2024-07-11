@@ -163,7 +163,7 @@ fun AboutScreen(navController: NavHostController){
                         )
                 } }
             Column (  modifier = Modifier
-                .padding(164.dp,65.dp,0.dp,0.dp)
+                .padding(135.dp,65.dp,0.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 ){
@@ -175,7 +175,7 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color(0xFF093A5A))
             }
             Column (  modifier = Modifier
-                .padding(74.dp,95.dp,0.dp,0.dp)
+                .padding(18.dp,95.dp,10.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -188,7 +188,7 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color.Black)
             }
             Column (  modifier = Modifier
-                .padding(164.dp,205.dp,0.dp,0.dp)
+                .padding(130.dp,205.dp,0.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -200,7 +200,7 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color(0xFF093A5A))
             }
             Row (  modifier = Modifier
-                .padding(124.dp,225.dp,0.dp,0.dp)
+                .padding(101.dp,228.dp,0.dp,0.dp)
                 ,
 //                horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -218,7 +218,7 @@ fun AboutScreen(navController: NavHostController){
 //                    color =  Color.Black)
             }
             Row (  modifier = Modifier
-                .padding(124.dp,244.dp,0.dp,0.dp)
+                .padding(101.dp,248.dp,0.dp,0.dp)
                 ,
 //                horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -236,7 +236,7 @@ fun AboutScreen(navController: NavHostController){
 //                    color =  Color.Black)
             }
             Row (  modifier = Modifier
-                .padding(124.dp,260.dp,0.dp,0.dp)
+                .padding(101.dp,267.dp,0.dp,0.dp)
                 ,
 //                horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -254,7 +254,7 @@ fun AboutScreen(navController: NavHostController){
 //                    color =  Color.Black)
             }
             Column (  modifier = Modifier
-                .padding(164.dp,285.dp,0.dp,0.dp)
+                .padding(141.dp,310.dp,0.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -265,13 +265,14 @@ fun AboutScreen(navController: NavHostController){
                     fontWeight = FontWeight.Bold,
                     color =  Color(0xFF093A5A))
             }
+            Spacer(modifier = Modifier.height(13.dp))
             Column (  modifier = Modifier
-                .padding(74.dp,308.dp,0.dp,0.dp)
+                .padding(22.dp,330.dp,6.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
                 Text(text = "We aim to provide our customers with seamless  and enjoyable travel experiences." +
-                        "We aim to connect people to new places,,cultures and experiences through our comprehensive flight options and exceptional customer service.",
+                        "We aim to connect people to new places,cultures and experiences through our comprehensive flight options and exceptional customer service.",
                     fontSize = 17.sp,
                     fontStyle = FontStyle.Normal,
                     fontFamily = FontFamily.SansSerif,
@@ -279,7 +280,7 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color.Black)
             }
             Column (  modifier = Modifier
-                .padding(114.dp,485.dp,0.dp,0.dp)
+                .padding(78.dp,463.dp,0.dp,0.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
@@ -291,15 +292,11 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color(0xFF093A5A))
             }
             Column (  modifier = Modifier
-                .width(500.dp)
-                .height(750.dp)
-                .padding(40.dp,525.dp,0.dp,0.dp)
-                .background(
-                    Color(0xFF093A5A)
-                ),
+                .padding(124.dp,492.dp,0.dp,0.dp)
+                ,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ){
-                Text(text = "ABOUT US",
+                Text(text = "Let's Visit ...",
                     fontSize = 20.sp,
                     fontStyle = FontStyle.Italic,
                     fontFamily = FontFamily.SansSerif,
@@ -307,9 +304,9 @@ fun AboutScreen(navController: NavHostController){
                     color =  Color(0xFF093A5A))
             }
             Column (  modifier = Modifier
-                .width(50.dp)
+                .width(500.dp)
                 .height(750.dp)
-                .padding(0.dp,55.dp,0.dp,0.dp)
+                .padding(0.dp, 547.dp, 0.dp, 0.dp)
                 .background(
                     Color(0xFF093A5A)
                 ),
@@ -322,6 +319,39 @@ fun AboutScreen(navController: NavHostController){
                     fontWeight = FontWeight.Bold,
                     color =  Color(0xFF093A5A))
             }
+//            Column (  modifier = Modifier
+//                .width(30.dp)
+//                .height(750.dp)
+//                .padding(0.dp,55.dp,0.dp,0.dp)
+//                .background(
+//                    Color(0xFF093A5A)
+//                ),
+//                horizontalAlignment = Alignment.CenterHorizontally,
+//            ){
+//                Text(text = "ABOUT US",
+//                    fontSize = 20.sp,
+//                    fontStyle = FontStyle.Italic,
+//                    fontFamily = FontFamily.SansSerif,
+//                    fontWeight = FontWeight.Bold,
+//                    color =  Color(0xFF093A5A))
+//            }
+            Column (  modifier = Modifier
+                .width(30.dp)
+                .height(750.dp)
+                .padding(60.dp, 55.dp, 0.dp, 0.dp)
+                .background(
+                    Color(0xFF093A5A)
+                ),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ){
+                Text(text = "ABOUT US",
+                    fontSize = 20.sp,
+                    fontStyle = FontStyle.Italic,
+                    fontFamily = FontFamily.SansSerif,
+                    fontWeight = FontWeight.Bold,
+                    color =  Color(0xFF093A5A))
+            }
+
 
 
 
@@ -330,7 +360,7 @@ fun AboutScreen(navController: NavHostController){
 
 
             Column (
-                modifier = Modifier.padding(0.dp,525.dp,0.dp,0.dp),
+                modifier = Modifier.padding(0.dp,547.dp,0.dp,0.dp),
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Bottom)
             {

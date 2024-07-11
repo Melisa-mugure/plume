@@ -311,7 +311,7 @@ fun Fly(navController: NavHostController){
                                     active = it
                                 },
                                 placeholder = {
-                                    Text (text = "Search continent")
+                                    Text (text = "Search destination")
                                 },
                                 leadingIcon = {
                                     Icon(imageVector = Icons.Default.Search, contentDescription = "")

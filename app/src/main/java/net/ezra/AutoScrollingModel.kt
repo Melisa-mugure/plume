@@ -10,9 +10,9 @@ data class AutoScrollingModel(
 
 val autoScrollingList = listOf(
     AutoScrollingModel(R.drawable.tower, "Paris"),
-    AutoScrollingModel(R.drawable.wildlife, "Kenya"),
+    AutoScrollingModel(R.drawable.cardinal, "Italy"),
     AutoScrollingModel(R.drawable.beach, "Maldives"),
     AutoScrollingModel(R.drawable.china, "China"),
     AutoScrollingModel(R.drawable.brazil, "America"),
-    AutoScrollingModel(R.drawable.uk, "Australia")
+    AutoScrollingModel(R.drawable.wildlife, "Kenya")
 )

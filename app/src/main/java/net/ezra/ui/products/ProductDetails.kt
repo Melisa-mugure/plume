@@ -96,14 +96,14 @@ fun ProductDetailScreen(navController: NavController, productId: String) {
 //            )
         },
         content = {
-            Box{
-                Image(painter = painterResource(id = R.drawable.bac),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
-            }
+//            Box{
+//                Image(painter = painterResource(id = R.drawable.bac),
+//                    contentDescription = null,
+//                    modifier = Modifier
+//                        .fillMaxSize(),
+//                    contentScale = ContentScale.Crop
+//                )
+//            }
 
             Row(modifier = Modifier
                 .fillMaxWidth()
@@ -160,9 +160,11 @@ fun ProductDetailScreen(navController: NavController, productId: String) {
 
             Column(
                 modifier = Modifier
-                    .padding(0.dp,80.dp,0.dp,0.dp)
-                    .fillMaxSize(),
-//                    .background(Color(0xff9AEDC9)),
+                    .padding(0.dp,40.dp,0.dp,0.dp)
+                    .fillMaxSize()
+                    .background(
+                Color(0x2A093A56)
+            )
             ) {
                 product?.let {
                     Column(
@@ -170,12 +172,12 @@ fun ProductDetailScreen(navController: NavController, productId: String) {
                     ) {
                         Card(
                             modifier = Modifier
-                                .padding(25.dp, 0.dp, 0.dp, 0.dp)
+                                .padding(25.dp, 20.dp, 0.dp, 0.dp)
                                 .height(310.dp)
                                 .width(280.dp)
                             ,
                             shape = CircleShape,
-                            colors = CardDefaults.cardColors(Color(0x8FFFFFE6))
+                            colors = CardDefaults.cardColors(Color(0x8FFFFFE5))
                         ){
                             Image(
                                 painter = rememberAsyncImagePainter(it.imageUrl),
@@ -195,7 +197,7 @@ fun ProductDetailScreen(navController: NavController, productId: String) {
                             fontSize = 30.sp,
                             fontFamily = FontFamily.Serif,
                             fontWeight = FontWeight.ExtraBold,
-                                color = Color.White,)
+                                color =   Color(0xFF093A5A),)
 
                         Spacer(modifier = Modifier.height(22.dp))
 
@@ -223,13 +225,13 @@ fun ProductDetailScreen(navController: NavController, productId: String) {
                         Spacer(modifier = Modifier.height(5.dp))
 
                         Row {
-                            Text(text = "Early-Morning",color = Color.White,)
+                            Text(text = "Early-Morning",color =   Color(0xFF093A5A),)
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text(text = "Mid-Morning",color = Color.White,)
+                            Text(text = "Mid-Morning",color =   Color(0xFF093A5A))
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text(text = "Afternoon",color = Color.White,)
+                            Text(text = "Afternoon",color =    Color(0xFF093A5A),)
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text(text = "Evening",color = Color.White,)
+                            Text(text = "Evening",color =   Color(0xFF093A5A))
 
                         }
 

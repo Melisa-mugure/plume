@@ -117,9 +117,24 @@ fun Continents(navController: NavHostController){
                                         tint = Color.White
                                     )
                                 }
+                                Spacer(modifier = Modifier.width(55.dp))
+
+                                androidx.compose.material.Text(
+                                    text = "CONTINENTS",
+                                    modifier = Modifier
+                                        .padding(9.dp, 14.dp, 0.dp, 0.dp),
+                                    color = Color.White,
+                                    fontStyle = FontStyle.Italic,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 17.sp,
+                                    fontFamily = FontFamily.Serif
+                                )
 
                                 Spacer(modifier = Modifier
-                                    .width(250.dp))
+                                    .width(75.dp))
+
+//            Spacer(modifier = Modifier
+//                .width(250.dp))
 
 //                                Icon(painter = painterResource(id = R.drawable.location ),
 //                                    contentDescription = "",
@@ -131,8 +146,8 @@ fun Continents(navController: NavHostController){
 //                                            navController.navigate(ROUTE_CONTINENTS)
 //                                        },
 //                                )
-                                Spacer(modifier = Modifier
-                                    .width(3.dp))
+//            Spacer(modifier = Modifier
+//                .width(3.dp))
                                 Card(
                                     modifier = Modifier
                                         .size(46.dp)
@@ -147,31 +162,31 @@ fun Continents(navController: NavHostController){
                                         modifier = Modifier
                                             .fillMaxSize()
 //                                        .align(Alignment.CenterHorizontally)
-                                          ,
+                                        ,
 
 
                                         )
                                 } }
 
-                            Spacer(modifier = Modifier
-                                .height(10.dp))
-
-
-                            Row (modifier = Modifier
-                                    .fillMaxWidth()
-                                .height(38.dp)
-                                .background(
-                                    Color.White
-                                )){
-                                Text(text = "CONTINENTS",
-                                    modifier = Modifier.padding(100.dp,0.dp,0.dp,0.dp),
-//                                        .align(Alignment.CenterHorizontally),
-                                    color = (   Color(0xFF093A5A)),
-                                    fontSize = 20.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    fontFamily = FontFamily.Serif,
-                                    fontStyle = FontStyle.Italic)
-                            }
+//                            Spacer(modifier = Modifier
+//                                .height(10.dp))
+//
+//
+//                            Row (modifier = Modifier
+//                                    .fillMaxWidth()
+//                                .height(38.dp)
+//                                .background(
+//                                    Color.White
+//                                )){
+//                                Text(text = "CONTINENTS",
+//                                    modifier = Modifier.padding(100.dp,0.dp,0.dp,0.dp),
+////                                        .align(Alignment.CenterHorizontally),
+//                                    color = (   Color(0xFF093A5A)),
+//                                    fontSize = 20.sp,
+//                                    fontWeight = FontWeight.Bold,
+//                                    fontFamily = FontFamily.Serif,
+//                                    fontStyle = FontStyle.Italic)
+//                            }
 
 //                            Spacer(modifier = Modifier.height(8.dp))
 //                            Row{
@@ -199,7 +214,7 @@ fun Continents(navController: NavHostController){
 //                            }
 
                             Spacer(modifier = Modifier
-                                .height(10.dp))
+                                .height(1.dp))
 
 
                             Card(
@@ -251,7 +266,7 @@ fun Continents(navController: NavHostController){
                                     modifier = Modifier
                                         .padding(5.dp,180.dp,0.dp,0.dp))
                             }
-                            Spacer(modifier = Modifier.height(25.dp))
+                            Spacer(modifier = Modifier.height(7.dp))
 
 
                             Card(
@@ -302,7 +317,7 @@ fun Continents(navController: NavHostController){
                                     modifier = Modifier
                                         .padding(5.dp,180.dp,0.dp,0.dp))
                             }
-                            Spacer(modifier = Modifier.height(25.dp))
+                            Spacer(modifier = Modifier.height(7.dp))
 
 
                             Card(
@@ -353,7 +368,7 @@ fun Continents(navController: NavHostController){
                                 modifier = Modifier
                                     .padding(5.dp,180.dp,0.dp,0.dp))
                             }
-                            Spacer(modifier = Modifier.height(25.dp))
+                            Spacer(modifier = Modifier.height(7.dp))
 
 
                             Card(
@@ -405,7 +420,7 @@ fun Continents(navController: NavHostController){
                                         .padding(5.dp,180.dp,0.dp,0.dp))
                             }
 
-                            Spacer(modifier = Modifier.height(120.dp))
+                            Spacer(modifier = Modifier.height(72.dp))
 
                         }
                     }

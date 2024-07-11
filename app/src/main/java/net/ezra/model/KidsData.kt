@@ -12,9 +12,9 @@ data class KidsData (
 
 val kidsList = listOf(
     KidsData(
-        title ="Diversity of Culture",
+        title ="Serene Mothernature",
         rating = 4.0f,
-        R.drawable.maasai
+        R.drawable.elephant
     ),
     KidsData(
         title ="Amazing infrastructure",
@@ -22,14 +22,14 @@ val kidsList = listOf(
         R.drawable.uk
     ),
     KidsData(
-        title ="Serene Mothernature",
-        rating = 4.0f,
-        R.drawable.elephant
-    ),
-    KidsData(
         title ="Warm Sandy beaches",
         rating = 4.0f,
         R.drawable.beach
+    ),
+    KidsData(
+        title ="Diversity of culture",
+        rating = 4.0f,
+        R.drawable.maasai
     ),
     KidsData(
         title ="Historical Monuments ",

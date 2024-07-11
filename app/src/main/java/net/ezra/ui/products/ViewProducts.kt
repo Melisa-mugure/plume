@@ -189,9 +189,11 @@ fun ProductListScreen(navController: NavController, products: List<Product>) {
             } }
         Column(
             modifier = Modifier
-                .padding(0.dp,80.dp,0.dp,0.dp)
+                .padding(0.dp,54.dp,0.dp,0.dp)
                 .fillMaxSize()
-//                .background(Color(0xff9AEDC9))
+               .background(
+                Color(0x2A093A56)
+            )
         ) {
             if (isLoading) {
                 // Progress indicator
@@ -266,16 +268,16 @@ fun ProductListItem(product: Product, onItemClick: (String) -> Unit) {
                     .padding(20.dp,0.dp,0.dp,0.dp)
                 .align(Alignment.CenterHorizontally),
                 fontSize = 20.sp,
-                color = Color.Cyan)
+                color =  Color(0xFF093A5A))
             Text(text = " Seats: ${product.quantity}",
                 fontSize = 15.sp,
-                color = Color.White,
+                color = Color.Black,
                 modifier = Modifier
                     .padding(18.dp,0.dp,0.dp,0.dp)
                     .align(Alignment.CenterHorizontally))
             Text(text = "Ticket price - $${product.price}",
                 fontSize = 15.sp,
-                color = Color.White,
+                color = Color.Black,
                 modifier = Modifier
                     .padding(25.dp,0.dp,0.dp,0.dp)
                     .align(Alignment.CenterHorizontally))

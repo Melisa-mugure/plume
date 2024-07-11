@@ -49,7 +49,7 @@ import net.ezra.navigation.ROUTE_VIEW_PRODUCTS
 fun HomeScreen(navController: NavHostController) {
     Box (
     ){
-        Image(painter = painterResource(id = R.drawable.setttt),
+        Image(painter = painterResource(id = R.drawable.backkk),
             contentDescription = null,
             modifier = Modifier.run {
                 fillMaxWidth()
@@ -76,7 +76,7 @@ fun HomeScreen(navController: NavHostController) {
                     color = Color.White,
                     fontSize = 28.sp,
                     fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold)
+                    fontWeight = FontWeight.ExtraBold)
             }
             Spacer(modifier = Modifier.height(400.dp))
             Row{
@@ -156,7 +156,7 @@ fun HomeScreen(navController: NavHostController) {
                                     .padding(5.dp)
                                     .height(45.dp)
                                     .width(165.dp),
-                                colors = ButtonDefaults.buttonColors(Color.Black),
+                                colors = ButtonDefaults.buttonColors(Color(0xFF093A5A)),
                                 shape = RoundedCornerShape(30.dp)
                             ) {
 
@@ -176,7 +176,7 @@ fun HomeScreen(navController: NavHostController) {
                                     .padding(5.dp)
                                     .height(45.dp)
                                     .width(165.dp),
-                                colors = ButtonDefaults.buttonColors(Color.Black),
+                                colors = ButtonDefaults.buttonColors(Color(0xFF093A5A)),
                                 shape = RoundedCornerShape(30.dp)
                             ) {
 

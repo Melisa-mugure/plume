@@ -15,8 +15,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -83,27 +85,79 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
 //            contentScale = ContentScale.Crop
 //        )
 //    }
-    Icon(Icons.AutoMirrored.Filled.ArrowBack,
-        "backIcon",
-        tint = Color.Black,
-        modifier = Modifier
-            .padding(5.dp)
-            .width(29.dp)
-            .clickable {
-                navController.navigate(ROUTE_FLY)
-            },
-    )
+//    Icon(Icons.AutoMirrored.Filled.ArrowBack,
+//        "backIcon",
+//        tint = Color.Black,
+//        modifier = Modifier
+//            .padding(5.dp)
+//            .width(29.dp)
+//            .clickable {
+//                navController.navigate(ROUTE_FLY)
+//            },
+//    )
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
             .background(
-                Color(0xFF7C9AAD)
+                Color(0x2A093A56)
             )
-            .padding(10.dp)
+            .padding(2.dp)
     ) {
 
 
         item {
+            Row(modifier = Modifier
+                .fillMaxWidth()
+                .height(58.dp)
+                .background(
+                    Color(0xFF093A5A)
+                )){
+                IconButton(onClick = {
+                    navController.navigate(ROUTE_FLY)
+                }) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.ArrowBack,
+                        "backIcon",
+                        tint = Color.White
+                    )
+                }
+
+                Spacer(modifier = Modifier
+                    .width(250.dp))
+
+//                                Icon(painter = painterResource(id = R.drawable.location ),
+//                                    contentDescription = "",
+//                                    tint = Color.Black,
+//                                    modifier = Modifier
+//                                        .padding(5.dp)
+//                                        .width(29.dp)
+//                                        .clickable {
+//                                            navController.navigate(ROUTE_CONTINENTS)
+//                                        },
+//                                )
+                Spacer(modifier = Modifier
+                    .width(3.dp))
+                androidx.compose.material.Card(
+                    modifier = Modifier
+                        .size(46.dp)
+                        .padding(5.dp),
+                    shape = CircleShape
+
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.plume),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+
+                        modifier = Modifier
+                            .fillMaxSize()
+//                                        .align(Alignment.CenterHorizontally)
+                        ,
+
+
+                        )
+                }
+            }
             if (productImageUri != null) {
                 Image(
                     painter = rememberAsyncImagePainter(productImageUri),
@@ -128,7 +182,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
             Spacer(modifier = Modifier.height(16.dp))
             Button( modifier = Modifier
 //                                    .align(Alignment.CenterHorizontally)
-                .padding(85.dp,0.dp,0.dp,0.dp)
+                .padding(93.dp,0.dp,0.dp,0.dp)
                 .height(45.dp)
                 .width(165.dp),
                 colors = androidx.compose.material.ButtonDefaults.buttonColors(backgroundColor =  Color(0xFF093A5A)
@@ -146,7 +200,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
                 onValueChange = { productName = it },
                 label = { Text("Destination") },
                 isError = productNameError,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().padding(3.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
             TextField(
@@ -154,7 +208,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
                 onValueChange = { productQuantity = it },
                 label = { Text(" Seats ") },
                 isError = productNameError,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().padding(3.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
             TextField(
@@ -162,7 +216,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
                 onValueChange = { productDescription = it },
                 label = { Text("Destination Description") },
                 isError = productDescriptionError,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().padding(3.dp)
             )
             Spacer(modifier = Modifier.height(8.dp))
             TextField(
@@ -171,7 +225,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
                 label = { Text("Ticket Price") },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                 isError = productPriceError,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().padding(3.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -216,7 +270,7 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
                     },
                     modifier = Modifier
 //                                    .align(Alignment.CenterHorizontally)
-                        .padding(82.dp,0.dp,0.dp,0.dp)
+                        .padding(86.dp,0.dp,0.dp,0.dp)
                         .height(45.dp)
                         .width(185.dp),
                     colors = androidx.compose.material.ButtonDefaults.buttonColors(backgroundColor =  Color(0xFF093A5A)
@@ -232,7 +286,8 @@ fun InsertProductScreen(navController: NavController, onProductAdded: () -> Unit
             if (isUploading) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
+                    CircularProgressIndicator(modifier = Modifier.size(48.dp),
+                        color = Color(0xFF093A5A))
                     Text("Uploading...", modifier = Modifier.padding(start = 8.dp))
                 }
             }

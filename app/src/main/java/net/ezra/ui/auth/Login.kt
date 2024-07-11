@@ -10,6 +10,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,65 +40,71 @@ fun LoginScreen(navController: NavController, onLoginSuccess: () -> Unit) {
         navController.popBackStack()
 
     }
-    Box{
-        Image(painter = painterResource(id = R.drawable.bac),
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
-    }
+//    Box{
+//        Image(painter = painterResource(id = R.drawable.bac),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .fillMaxSize(),
+//            contentScale = ContentScale.Crop
+//        )
+//    }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp,),
+            .padding(2.dp,),
 //            .background(
 //                Color(0x7C093A5A)
 //            ),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+
     ) {
 
         Card( modifier = Modifier
-            .padding(10.dp)
-            .height(200.dp)
-            .width(350.dp),
-            shape = RoundedCornerShape(50.dp, 0.dp, 50.dp, 0.dp),
+            .padding(0.dp)
+            .height(400.dp)
+            .width(550.dp),
+            shape = RoundedCornerShape(30.dp, 30.dp, 0.dp, 0.dp),
         )
         {
-            Image(painter = painterResource(id = R.drawable.setttt),
+            Image(painter = painterResource(id = R.drawable.backkk),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize())
 
         }
-
+        Spacer(modifier = Modifier.height(10.dp))
 
         Text("Login",
             color = Color(0xFF093A5A),
-            style = MaterialTheme.typography.h4)
-        Spacer(modifier = Modifier.height(16.dp))
+            style = MaterialTheme.typography.h5)
+        Spacer(modifier = Modifier.height(5.dp))
 
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
             label = { Text("Email") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(3.dp),
+
         )
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(4.dp))
 
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
             label = { Text("Password") },
             visualTransformation = PasswordVisualTransformation(),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(3.dp)
         )
         Spacer(modifier = Modifier.height(16.dp))
 
         if (isLoading) {
-            CircularProgressIndicator(modifier = Modifier.size(48.dp))
+            CircularProgressIndicator(modifier = Modifier.size(48.dp),
+                color = Color(0xFF093A5A))
         } else {
 
 

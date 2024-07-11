@@ -34,19 +34,19 @@ fun SignUpScreen(navController: NavController, onSignUpSuccess: () -> Unit) {
     var isLoading by remember { mutableStateOf(false) }
     val context = LocalContext.current
 
-    Box{
-        Image(painter = painterResource(id = R.drawable.bac),
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
-    }
+//    Box{
+//        Image(painter = painterResource(id = R.drawable.bac),
+//            contentDescription = null,
+//            modifier = Modifier
+//                .fillMaxSize(),
+//            contentScale = ContentScale.Crop
+//        )
+//    }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(2.dp),
 //            .background(
 //                Color(0x7C093A5A)
 //            ),
@@ -54,13 +54,13 @@ fun SignUpScreen(navController: NavController, onSignUpSuccess: () -> Unit) {
         verticalArrangement = Arrangement.Center
     ) {
         Card( modifier = Modifier
-            .padding(10.dp)
-            .height(200.dp)
-            .width(350.dp),
-            shape = RoundedCornerShape(50.dp, 0.dp, 50.dp, 0.dp),
+            .padding(0.dp)
+            .height(380.dp)
+            .width(550.dp),
+            shape = RoundedCornerShape(30.dp, 30.dp, 0.dp, 0.dp),
         )
         {
-            Image(painter = painterResource(id = R.drawable.setttt),
+            Image(painter = painterResource(id = R.drawable.backkk),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize())
@@ -68,16 +68,16 @@ fun SignUpScreen(navController: NavController, onSignUpSuccess: () -> Unit) {
 
         Text("Sign Up",
             color = Color(0xFF093A5A),
-            style = MaterialTheme.typography.h4)
-        Spacer(modifier = Modifier.height(16.dp))
+            style = MaterialTheme.typography.h5)
+        Spacer(modifier = Modifier.height(5.dp))
 
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
             label = { Text("Email") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(3.dp)
         )
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(5.dp))
 
 
         OutlinedTextField(
@@ -85,21 +85,22 @@ fun SignUpScreen(navController: NavController, onSignUpSuccess: () -> Unit) {
             onValueChange = { password = it },
             label = { Text("Password") },
             visualTransformation = PasswordVisualTransformation(),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(3.dp)
         )
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(5.dp))
 
         OutlinedTextField(
             value = confirmPassword,
             onValueChange = { confirmPassword = it },
             label = { Text("Confirm Password") },
             visualTransformation = PasswordVisualTransformation(),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(3.dp)
         )
         Spacer(modifier = Modifier.height(16.dp))
 
         if (isLoading) {
-            CircularProgressIndicator(modifier = Modifier.size(48.dp))
+            CircularProgressIndicator(modifier = Modifier.size(48.dp),
+                color = Color(0xFF093A5A))
         } else {
             Button(
                 colors = ButtonDefaults.buttonColors(Color(0xFF093A5A)),
