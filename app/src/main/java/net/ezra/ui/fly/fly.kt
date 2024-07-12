@@ -207,17 +207,38 @@ fun Fly(navController: NavHostController){
                                 fontFamily = FontFamily.Serif)
 
                             Spacer(modifier = Modifier
-                                .width(195.dp))
-                            Icon(painter = painterResource(id = R.drawable.location ),
-                                contentDescription = "",
-                                tint = Color.White,
-                                modifier = Modifier
-                                    .padding(5.dp)
-                                    .width(27.dp)
-                                    .clickable {
-                                        navController.navigate(ROUTE_CONTINENTS)
-                                    },
-                            )
+                                .width(176.dp))
+
+                            Column{
+                                Icon(imageVector = Icons.Default.ShoppingCart,
+                                    contentDescription ="" ,
+                                    tint = Color.White,
+                                    modifier = Modifier
+                                        .padding(5.dp)
+                                        .width(45.dp)
+                                        .clickable {
+                                            navController.navigate(ROUTE_INSERT_PRODUCT)
+                                        }, )
+                                Text(
+                                    text = "Add",
+                                    modifier = Modifier
+                                        .padding(9.dp,0.dp,0.dp,0.dp),
+                                    color = Color.White,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 10.sp,
+                                    fontFamily = FontFamily.Serif
+                                )
+                            }
+//                            Icon(painter = painterResource(id = R.drawable.location ),
+//                                contentDescription = "",
+//                                tint = Color.White,
+//                                modifier = Modifier
+//                                    .padding(5.dp)
+//                                    .width(27.dp)
+//                                    .clickable {
+//                                        navController.navigate(ROUTE_CONTINENTS)
+//                                    },
+//                            )
                         }
                         Row(modifier = Modifier
                             .height(70.dp)
@@ -838,7 +859,7 @@ fun Fly(navController: NavHostController){
                             },
                                 modifier = Modifier
 //                                    .align(Alignment.CenterHorizontally)
-                                    .padding(13.dp,0.dp,3.dp,0.dp)
+                                    .padding(13.dp, 0.dp, 3.dp, 0.dp)
                                     .height(38.dp)
                                     .width(328.dp),
                                 colors = ButtonDefaults.buttonColors(Color.Black),
@@ -1386,20 +1407,12 @@ fun BottomBar(navController: NavHostController) {
             onClick = {
                 navController.navigate(ROUTE_ABOUT)
             }
-        )
-        BottomNavigationItem(icon = {
-            Icon(imageVector = Icons.Default.ShoppingCart,"",tint = Color.White,)
-        },
-            label = { Text(text = "Add", color = Color.White) },
-            selected = (selectedIndex.value == 2),
-            onClick = {
-                navController.navigate(ROUTE_INSERT_PRODUCT)
-            }
+
         )
         BottomNavigationItem(icon = {
             Icon(imageVector = Icons.Default.MailOutline,"",tint = Color.White,)
         },
-            label = { Text(text = "Query", color = Color.White) },
+            label = { Text(text = "Contact", color = Color.White) },
             selected = (selectedIndex.value == 2),
             onClick = {
                 navController.navigate(ROUTE_CONTACT)

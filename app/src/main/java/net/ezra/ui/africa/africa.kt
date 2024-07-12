@@ -821,19 +821,11 @@ fun BottomBar(navController: NavHostController) {
                 navController.navigate(ROUTE_ABOUT)
             }
         )
-        BottomNavigationItem(icon = {
-            Icon(imageVector = Icons.Default.ShoppingCart,"",tint = Color.White,)
-        },
-            label = { Text(text = "Add", color = Color.White) },
-            selected = (selectedIndex.value == 2),
-            onClick = {
-                navController.navigate(ROUTE_INSERT_PRODUCT)
-            }
-        )
+
         BottomNavigationItem(icon = {
             Icon(imageVector = Icons.Default.MailOutline,"",tint = Color.White,)
         },
-            label = { Text(text = "Query", color = Color.White) },
+            label = { Text(text = "Contact", color = Color.White) },
             selected = (selectedIndex.value == 2),
             onClick = {
                 navController.navigate(ROUTE_CONTACT)
